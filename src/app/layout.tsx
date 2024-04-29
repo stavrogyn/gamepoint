@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { IconLabelTabs } from "@/shared/ui";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="flex h-screen w-full flex-col items-center justify-between">
+          <div>{children}</div>
+          <IconLabelTabs />
+        </main>
+      </body>
     </html>
   );
 }
