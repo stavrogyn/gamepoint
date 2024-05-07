@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@effector/next": "^0.7.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@farfetched/core": "^0.12.4",
+    "@farfetched/runtypes": "^0.12.4",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "@next/env": "^14.2.3",
+    "effector": "^23.2.1",
+    "effector-react": "^23.2.0",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "runtypes": "^6.7.0",
+    "zod": "^3.23.6"
   },
   "devDependencies": {
     "@types/node": "^20",
