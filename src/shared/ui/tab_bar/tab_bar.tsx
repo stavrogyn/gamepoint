@@ -8,14 +8,14 @@ import { Games, House, SportsEsports } from '@mui/icons-material';
 import { usePathname } from 'next/navigation';
 
 const links = [
-  { name: 'Home', href: '/home', icon: House },
+  { name: '', href: '/home', icon: House },
   {
-    name: 'Computer',
+    name: '',
     href: '/reservation',
     icon: Games,
   },
-  { name: 'PlayStation', href: '/playstation', icon: SportsEsports },
-  { name: 'Account', href: '/account', icon: PersonPinIcon },
+  { name: '', href: '/playstation', icon: SportsEsports },
+  { name: '', href: '/account', icon: PersonPinIcon },
 ];
 
 export const IconLabelTabs = () => {
@@ -29,7 +29,7 @@ export const IconLabelTabs = () => {
   const tabIndex = useMemo(() => links.findIndex((link) => link.href === currentPathName), [currentPathName]);
 
   return (
-    <Tabs value={tabIndex} onChange={handleChange} aria-label="icon label tabs example">
+    <Tabs value={tabIndex} onChange={handleChange} variant='fullWidth' aria-label="icon label tabs example" className='w-full'>
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 import { IconLabelTabs } from "@/shared/ui";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const comfortaa = Comfortaa({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className="flex h-screen w-full flex-col items-center justify-between">
-          <div>{children}</div>
+      <body className={`${comfortaa.className} flex justify-center`}>
+        <main className="flex h-screen flex-col items-center justify-between w-[640px]">
+          {children}
           <IconLabelTabs />
         </main>
       </body>
