@@ -3,9 +3,10 @@
 import { useFormState } from 'react-dom'
 import { SigninButton } from './sign-in-button'
 import { signin } from '@/shared/actions/sign-in'
+import { FormState } from '@/shared/lib/definitions'
  
 export function SigninForm() {
-  const [state, action] = useFormState(signin, undefined)
+  const [state, action] = useFormState<FormState>(signin, undefined)
  
   return (
     <form action={action} className='text-cyan-400 bg-slate-500'>

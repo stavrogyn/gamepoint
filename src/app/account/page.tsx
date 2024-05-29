@@ -2,13 +2,13 @@
 
 import { SigninForm } from "@/shared/ui/sign-in-form/sign-in-form";
 import { useUnit } from "effector-react";
-import { authModel } from "./auth.model";
+import { authModel, UserData } from "./auth.model";
 
-const isObject = (value) => {
+const isObject = (value: any) => {
   return value && typeof value === 'object' && !Array.isArray(value);
 };
 
-const RenderObject = ({ data }) => {
+const RenderObject = ({ data }: { data: any }) => {
   return (
     <div>
       {Object.entries(data).map(([key, value]) => {

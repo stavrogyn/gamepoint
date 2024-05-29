@@ -3,6 +3,7 @@
 import { useFormState } from 'react-dom'
 import { signup } from '@/shared/actions/sign-up'
 import { SignupButton } from './signup-button'
+import { ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode, Key } from 'react'
  
 export function SignupForm() {
   const [state, action] = useFormState(signup, undefined)
@@ -22,7 +23,7 @@ export function SignupForm() {
         <div>
           <p>Password must:</p>
           <ul>
-            {state.errors.password.map((error) => (
+            {state.errors.password.map((error: any) => (
               <li key={error}>- {error}</li>
             ))}
           </ul>

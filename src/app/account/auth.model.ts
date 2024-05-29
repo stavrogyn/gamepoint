@@ -28,7 +28,7 @@ type Token = {
   user_id: number;
 };
 
-type UserData = {
+export type UserData = {
   user: User;
   token: Token;
 } | null;

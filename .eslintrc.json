@@ -1,4 +1,3 @@
 {
-  "plugins": ["effector"],
-  "extends": ["next/core-web-vitals", "plugin:effector/react"]
+  "extends": ["next/core-web-vitals"]
 }
